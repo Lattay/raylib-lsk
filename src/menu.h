@@ -1,5 +1,5 @@
-#ifndef STK_MENU_H
-#define STK_MENU_H
+#ifndef LSK_MENU_H
+#define LSK_MENU_H
 #include "main.h"
 
 void menu_init(GameData* data);

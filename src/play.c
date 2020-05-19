@@ -1,8 +1,5 @@
 #include <stdlib.h>
-#include <math.h>
-#include "error.h"
 #include "play.h"
-#include "button.h"
 
 typedef enum {
   WIN

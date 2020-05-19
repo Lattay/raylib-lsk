@@ -1,5 +1,5 @@
-#ifndef STK_END_H
-#define STK_END_H
+#ifndef LSK_END_H
+#define LSK_END_H
 #include "main.h"
 
 void end_init(GameData* data);

@@ -1,9 +1,9 @@
 #include <raylib.h>
 #include "end.h"
-#include "button.h"
+#include "lsk_ui.h"
 
-static Button quit_button;
-static Button menu_button;
+static LSKButton quit_button;
+static LSKButton menu_button;
 
 void end_init(GameData* data){
   init_button(&quit_button, "Exit game", 300, 200, 20);

@@ -1,5 +1,5 @@
-#ifndef STK_H
-#define STK_H
+#ifndef LSK_H
+#define LSK_H
 #include <stdbool.h>
 
 typedef enum {

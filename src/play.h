@@ -1,5 +1,5 @@
-#ifndef STK_PLAY_H
-#define STK_PLAY_H
+#ifndef LSK_PLAY_H
+#define LSK_PLAY_H
 #include <raylib.h>
 #include "main.h"
 

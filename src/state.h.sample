@@ -1,5 +1,5 @@
-#ifndef STK_STATE_NAME_H
-#define STK_STATE_NAME_H
+#ifndef LSK_STATE_NAME_H
+#define LSK_STATE_NAME_H
 #include "main.h"
 
 void state_name_init(GameData* data);

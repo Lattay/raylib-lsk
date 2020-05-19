@@ -23,7 +23,7 @@ void credit_draw(void){
 }
 
 StateName credit_update(void){
-  if(IsMouseButtonPressed(MOUSE_LEFT_BUTTON)){
+  if(IsMouseLSKButtonPressed(MOUSE_LEFT_BUTTON)){
     return MENU;
   } else {
     return CREDIT;

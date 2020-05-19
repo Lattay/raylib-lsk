@@ -1,5 +1,5 @@
-#ifndef STK_CREDIT_H
-#define STK_CREDIT_H
+#ifndef LSK_CREDIT_H
+#define LSK_CREDIT_H
 #include "main.h"
 
 void credit_init(GameData* data);
