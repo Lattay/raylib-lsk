@@ -26,7 +26,7 @@ void draw_button(LSKButton* but){
 
 bool button_pressed(LSKButton* but){
   if(but->disabled) return false;
-  return IsMouseLSKButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), but->box);
+  return IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), but->box);
 }
 
 void free_button(LSKButton* but){

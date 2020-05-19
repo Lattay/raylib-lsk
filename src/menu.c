@@ -42,7 +42,7 @@ StateName menu_update(void){
 }
 
 void menu_suspend(void){
-  free_label(&data->label);
+  free_label(&data->title);
   free_button(&data->play_button);
   free_button(&data->about_button);
   free(data);

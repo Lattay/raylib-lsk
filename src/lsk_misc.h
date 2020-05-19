@@ -1,6 +1,7 @@
 #ifndef LSK_ERROR_H
 #define LSK_ERROR_H
 #include <raylib.h>
+#include <math.h>
 
 /* Error routine */
 void error(const char* msg);
@@ -12,28 +13,45 @@ float vdist2(Vector2 v1, Vector2 v2);
 float vdist(Vector2 v1, Vector2 v2);
 
 /* Dot product */
-inline float vdot(Vector2 v1, Vector2 v2);
+static inline float vdot(Vector2 v1, Vector2 v2){
+  return v1.x * v2.x + v1.y * v2.y;
+}
 
 /* Angle between two vectors */
 float vangle(Vector2 v1, Vector2 v2);
 
-inline Vector2 vadd(Vector2 v1, Vector2 v2);
-inline Vector2 vsub(Vector2 v1, Vector2 v2);
+static inline Vector2 vadd(Vector2 v1, Vector2 v2){
+  return (Vector2){v1.x + v2.x, v1.y + v2.y};
+}
+
+static inline Vector2 vsub(Vector2 v1, Vector2 v2){
+  return (Vector2){v1.x - v2.x, v1.y - v2.y};
+}
 
 /* Return a rotated vector of angle (radians) */
-inline Vector2 vrot(Vector2 v, float angle);
+static inline Vector2 vrot(Vector2 v, float angle){
+  return (Vector2){cosf(angle) * v.x - sinf(angle) * v.y, sinf(angle) * v.x + cosf(angle) * v.y};
+}
 
 /* Return the square of the magnitude of the vector */
-inline float vnorm2(Vector2 v);
+static inline float vnorm2(Vector2 v){
+  return v.x * v.x + v.y * v.y;
+}
 
 /* Return the magnitude of the vector */
-inline float vnorm(Vector2 v);
+static inline float vnorm(Vector2 v){
+  return sqrt(vnorm2(v));
+}
 
 /* Return true if the vector is stricly zero */
-inline bool vzero(Vector2 v);
+static inline bool vzero(Vector2 v){
+  return v.x == 0.0 && v.y == 0.0;
+}
 
 /* Return true if the vector is almost zero (magnitude less than tol) */
-inline bool vzero_tol(Vector2 v, float tol);
+static inline bool vzero_tol(Vector2 v, float tol){
+  return vnorm2(v) < tol * tol;
+}
 
 /* Return a vector with the direction of v and a magnitude of 1 */
 Vector2 vnormalized(Vector2 v);
