@@ -51,6 +51,11 @@ void draw_label(LSKLabel* lab){
   DrawText(lab->text, lab->position.x, lab->position.y, lab->fontsize, BLACK);
 }
 
+void set_label(LSKLabel* lab, const char* text){
+  free(lab->text);
+  init_label(lab, text, lab->position.x, lab->position.y, lab->fontsize);
+}
+
 void free_label(LSKLabel* lab){
   free(lab->text);
 }
