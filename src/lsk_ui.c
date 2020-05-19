@@ -59,3 +59,31 @@ void set_label(LSKLabel* lab, const char* text){
 void free_label(LSKLabel* lab){
   free(lab->text);
 }
+
+void init_mlabel(LSKManagedLabel* lab, int x, int y, int fontsize){
+  lab->text = NULL;
+  lab->fontsize = fontsize;
+  lab->position = (Vector2){x, y};
+  lab->half_width = 0;
+  lab->changed = false;
+  lab->disabled = false;
+}
+
+void draw_mlabel(LSKManagedLabel* lab){
+  if(lab->disabled)
+    return;
+  if(lab->changed){
+    lab->changed = false;
+    lab->half_width = MeasureText(lab->text, lab->fontsize) / 2.0;
+  }
+  DrawText(lab->text, lab->position.x - lab->half_width, lab->position.y, lab->fontsize, BLACK);
+}
+
+void content_changed_mlabel(LSKManagedLabel* lab){
+  lab->changed = true;
+}
+
+void set_content_mlabel(LSKManagedLabel* lab, char* content){
+  content_changed_mlabel(lab);
+  lab->text = content;
+}

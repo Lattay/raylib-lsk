@@ -24,7 +24,21 @@ typedef struct {
 
 void init_label(LSKLabel* lab, const char* text, int x, int y, int fontsize);
 void draw_label(LSKLabel* lab);
-void set_label(LSKLabel* lab, const char* text);
 void free_label(LSKLabel* lab);
+
+/* A label whose content is managed by the user */
+typedef struct {
+  char* text;
+  int fontsize;
+  Vector2 position;
+  int half_width;
+  bool changed;
+  bool disabled;
+} LSKManagedLabel;
+
+void init_mlabel(LSKManagedLabel* lab, int x, int y, int fontsize);
+void draw_mlabel(LSKManagedLabel* lab);
+void content_changed_mlabel(LSKManagedLabel* lab);
+void set_content_mlabel(LSKManagedLabel* lab, char* content);
 
 #endif
