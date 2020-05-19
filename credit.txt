@@ -1,0 +1,6 @@
+About:
+This is the default credits of Lattay's Starter Kit.
+
+License:
+This game have been written in C with Raylib (see www.raylib.com).
+It is free and open-source, published under MIT Lisence.
