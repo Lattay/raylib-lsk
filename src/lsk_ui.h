@@ -19,7 +19,6 @@ typedef struct {
   char* text;
   int fontsize;
   Vector2 position;
-  Rectangle box;
   bool disabled;
 } LSKLabel;
 

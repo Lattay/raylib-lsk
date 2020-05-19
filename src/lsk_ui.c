@@ -32,3 +32,25 @@ bool button_pressed(LSKButton* but){
 void free_button(LSKButton* but){
   free(but->text);
 }
+
+void init_label(LSKLabel* lab, const char* text, int x, int y, int fontsize){
+  int l = 0;
+  while(text[l++] != 0);
+  lab->text = malloc(l * sizeof(char));
+  for(int i = 0; i < l; i++)
+    lab->text[i] = text[i];
+  int width = MeasureText(text, fontsize);
+  lab->position.y = y;
+  lab->position.x = x - width/2;
+  lab->fontsize = fontsize;
+  lab->disabled = false;
+}
+
+void draw_label(LSKLabel* lab){
+  if(lab->disabled) return;
+  DrawText(lab->text, lab->position.x, lab->position.y, lab->fontsize, BLACK);
+}
+
+void free_label(LSKLabel* lab){
+  free(lab->text);
+}
