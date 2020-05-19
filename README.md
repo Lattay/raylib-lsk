@@ -10,6 +10,7 @@ If you ever make something with this I would be happy to ear about it.
 
 ## Usage
 
+- (if you use git for you project) clone this repository using `git clone https://github.com/lattay/raylib-lsk -o lsk -b master --depth 1`
 - In the Makefile replace `EXE=starter_kit` with `EXE=name_of_your_game`
 - Change the content of credit.txt
 - In the menu add the buttons you need
