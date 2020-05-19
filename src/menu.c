@@ -7,7 +7,6 @@ typedef struct {
   LSKButton play_button;
   LSKButton about_button;
   LSKLabel title;
-  bool* use_ia;
 } MenuData;
 
 static MenuData* data;
@@ -17,7 +16,6 @@ void menu_init(GameData* gdata){
   init_button(&data->play_button, "Play", 300, 400, 20);
   init_button(&data->about_button, "About this game", 300, 500, 20);
   init_label(&data->title, "Starter kit", 300, 200, 30);
-  data->use_ia = &gdata->use_ia;
 }
 
 void draw_title(const char* title, int x, int y){

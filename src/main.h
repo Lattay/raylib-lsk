@@ -12,7 +12,6 @@ typedef enum {
 } StateName;
 
 typedef struct {
-  bool use_ia;
 } GameData;
 
 typedef struct {
