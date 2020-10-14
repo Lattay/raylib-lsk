@@ -15,12 +15,14 @@ int main(void)
   // Initialization
   //--------------------------------------------------------------------------------------
 
-  InitWindow(screenWidth, screenHeight, "Neutron");
+  InitWindow(screenWidth, screenHeight, "Starter kit");
 
   StateName new_state;
   GameState* state = &menu_state;
 
   GameData game_data;
+  init_camera(&game_data.cam, 600, 600);
+
   state->init(&game_data);
   bool window_should_close = false;
 

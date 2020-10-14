@@ -1,6 +1,7 @@
 #ifndef LSK_H
 #define LSK_H
 #include <stdbool.h>
+#include "lsk_camera.h"
 
 typedef enum {
   MENU=0,
@@ -12,6 +13,7 @@ typedef enum {
 } StateName;
 
 typedef struct {
+  LSKCamera cam;
 } GameData;
 
 typedef struct {
