@@ -10,10 +10,10 @@ If you ever make something with this I would be happy to ear about it.
 
 ## Usage
 
-- (if you use git for you project) clone this repository using `git clone https://github.com/lattay/raylib-lsk project_folder_name -b master --depth 1`
-- In the Makefile replace `EXE=starter_kit` with `EXE=name_of_your_game`
-- Change the content of credit.txt
-- In the menu add the buttons you need
-- Implement new states in separate files (always associate a C file with a header of the same name) using state.h.sample as a blueprint
+1. (if you use git for you project) clone this repository using `git clone https://github.com/lattay/raylib-lsk project_folder_name -b master --depth 1`
+2. In the Makefile replace `EXE=starter_kit` with `EXE=name_of_your_game`
+3. Change the content of credit.txt
+4. In the menu add the buttons you need
+5. Implement new states in separate files (always associate a C file with a header of the same name) using state.h.sample as a blueprint
 for the header
-- In main.h `StateName` enum add states **before** `STATE_NUM`, include headers **after** `#ifdef IMPLE_MAIN_LOOP` and add new `GameState` pointers in `states` array.
+6. In main.h `StateName` enum add states **before** `STATE_NUM`, include headers **after** `#ifdef IMPLE_MAIN_LOOP` and add new `GameState` pointers in `states` array.

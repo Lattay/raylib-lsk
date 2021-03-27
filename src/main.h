@@ -2,6 +2,7 @@
 #define LSK_H
 #include <stdbool.h>
 #include "lsk_camera.h"
+#include "lsk_basics.h"
 
 typedef enum {
   MENU=0,

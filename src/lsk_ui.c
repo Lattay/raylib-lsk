@@ -52,8 +52,20 @@ void draw_label(LSKLabel* lab){
 }
 
 void set_label(LSKLabel* lab, const char* text){
-  free(lab->text);
-  init_label(lab, text, lab->position.x, lab->position.y, lab->fontsize);
+  int w0 = MeasureText(lab->text, lab->fontsize);
+  
+  /* reallocate the space to fit */
+  int l = 0;
+  while(text[l++] != 0);
+  lab->text = realloc(lab->text, l * sizeof(char));
+
+  /* copy data */
+  for(int i = 0; i < l; i++)
+    lab->text[i] = text[i];
+
+  /* recenter */
+  int width = MeasureText(text, lab->fontsize);
+  lab->position.x = lab->position.x + w0/2 - width/2;
 }
 
 void free_label(LSKLabel* lab){

@@ -25,6 +25,7 @@ typedef struct {
 void init_label(LSKLabel* lab, const char* text, int x, int y, int fontsize);
 void draw_label(LSKLabel* lab);
 void free_label(LSKLabel* lab);
+void set_label(LSKLabel* lab, const char* text);
 
 /* A label whose content is managed by the user */
 typedef struct {

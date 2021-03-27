@@ -1,5 +1,5 @@
-#ifndef LSK_ERROR_H
-#define LSK_ERROR_H
+#ifndef LSK_BASICS_H
+#define LSK_BASICS_H
 #include <raylib.h>
 #include <math.h>
 
@@ -53,7 +53,12 @@ static inline bool vzero_tol(Vector2 v, float tol){
   return vnorm2(v) < tol * tol;
 }
 
+static inline int max(int a, int b){
+  return a > b ? a : b;
+}
+
 /* Return a vector with the direction of v and a magnitude of 1 */
 Vector2 vnormalized(Vector2 v);
 
+float lerp(float a, float b, float t);
 #endif

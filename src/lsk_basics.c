@@ -1,7 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <math.h>
-#include "lsk_misc.h"
+#include "lsk_basics.h"
+
+float lerp(float a, float b, float t){
+  return (1 - t) * a + t * b;
+}
 
 void error(const char* msg){
   perror(msg);
