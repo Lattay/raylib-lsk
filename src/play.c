@@ -11,7 +11,7 @@ typedef struct {
 
 static PlayData* data;
 
-void play_init(GameData * gdata) {
+void play_init(GameData* gdata) {
   data = malloc(sizeof(PlayData));
 }
 
@@ -32,7 +32,7 @@ void play_draw() {
 
   switch (data->state) {
     default:;
-        // pass
+      // pass
   }
 }
 
