@@ -11,31 +11,32 @@ typedef struct {
 
 static PlayData* data;
 
-void play_init(GameData* gdata){
+void play_init(GameData * gdata) {
   data = malloc(sizeof(PlayData));
 }
 
 /*
  * Transition to a different play state
  */
-void transit(PlayState new_state){
+void transit(PlayState new_state) {
   data->state = new_state;
 }
 
-StateName play_update(){
-  
+StateName play_update() {
+
   return END;
 }
 
-void play_draw(){
+void play_draw() {
   ClearBackground(RAYWHITE);
 
-  switch(data->state){
-    default: ; // pass
+  switch (data->state) {
+    default:;
+        // pass
   }
 }
 
-void play_suspend(){
+void play_suspend() {
   free(data);
   data = NULL;
 }
